@@ -306,6 +306,7 @@
 </template>
 
 <script>
+  import data from 'resume.json'
   export default {
     name: 'front',
     data() {
@@ -340,11 +341,12 @@
       }
     },
     created(){
-      var self = this;
-      this.$http.get('resume.json').then((res) =>{
-        self.userInfo = res.data;
-        this.$parent.loading = true;
-      });
+      // var self = this;
+      // this.$http.get('resume.json').then((res) =>{
+      //   self.userInfo = res.data;
+      //   this.$parent.loading = true;
+      // });
+      this.userInfo = data
     },
     methods:{
       calcDate(birthday){
