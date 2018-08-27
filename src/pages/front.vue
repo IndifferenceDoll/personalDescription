@@ -1,11 +1,5 @@
 <template>
   <div class="main-container" v-show="$parent.loading" style="display: none;">
-    <div class="useful-link no-print">
-      <!--<a class="theme-link" href="/index2.html"></a>-->
-      <a class="github-button" href="https://github.com/eternityspring/eternityspring.github.io" title="查看源码">
-        <img src="../../public/img/star.svg" alt="Github"><span>Star</span>
-      </a>
-    </div>
     <section class="section section-header">
       <div class="section-bg section-header-bg"></div>
       <div class="section-bg section-content-bg"></div>
@@ -23,7 +17,7 @@
           <div class="content-box">
             <div class="name-slogan">
               <h2 class="wow inShow no-print" data-wow-delay="0.1s">
-                <span class="text-light">{{userInfo.lastName}}</span>&nbsp;{{userInfo.firstName}}
+                <span class="text-light">{{userInfo.firstName}}</span>&nbsp;{{userInfo.lastName}}
               </h2>
               <div class="description wow inShow" data-wow-delay="0.15s">{{userInfo.slogan}}</div>
             </div>
@@ -50,7 +44,7 @@
                 <div class="col-md-6 col-lg-3">
                   <a class="item wow inShow" data-wow-delay="0.55s" :href="userInfo.website" target="_blank">
                     <h4>经验</h4>
-                    <div class="info">{{userInfo.exp[0]+(calcDate(userInfo.workSince)-1)+userInfo.exp[1]+calcDate(userInfo.workSince)+userInfo.exp[2]}}</div>
+                    <div class="info">{{userInfo.exp[0]+(calcDate(userInfo.workSince))+userInfo.exp[1]+calcDate(userInfo.workSince)+userInfo.exp[2]}}</div>
                   </a>
                 </div>
               </div>
@@ -295,7 +289,7 @@
           </div>
           <div class="name-slogan">
             <h2 class="wow inShow">
-              <span class="text-light">{{userInfo.lastName}}</span>&nbsp;{{userInfo.firstName}}
+              <span class="text-light">{{userInfo.firstName}}</span>&nbsp;{{userInfo.lastName}}
             </h2>
             <div class="description wow inShow" data-wow-delay="0.05s">{{userInfo.slogan}}（{{userInfo.tips}}）</div>
           </div>
@@ -306,7 +300,7 @@
 </template>
 
 <script>
-  import data from 'resume.json'
+  import data from '../../public/resume.json'
   export default {
     name: 'front',
     data() {
@@ -347,6 +341,7 @@
       //   this.$parent.loading = true;
       // });
       this.userInfo = data
+        this.$parent.loading = true;
     },
     methods:{
       calcDate(birthday){
