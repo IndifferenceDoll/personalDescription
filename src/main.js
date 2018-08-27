@@ -6,7 +6,7 @@ import router from './router'
 import axios from 'axios'
 
 
-axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '/personalDescription/dist/' : '/';
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '/personalDescription/dist/' : '/personalDescription/dist/';
 
 Vue.prototype.$http = axios;
 
