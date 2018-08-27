@@ -49,28 +49,28 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-6">
                   <div class="item wow inShow" data-wow-delay="0.6s">
                     <h4>Phone</h4>
                     <address class="info">{{userInfo.phone}}</address>
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-6">
+                  <a class="item wow inShow" data-wow-delay="0.75s" :href="userInfo.github" target="_blank">
+                    <h4>Github</h4>
+                    <div class="info">{{userInfo.github}}</div>
+                  </a>
+                </div>
+                <div class="col-md-6 col-lg-6">
                   <div class="item wow inShow" data-wow-delay="0.65s">
                     <h4>QQ</h4>
                     <div class="info">{{userInfo.qq.number}}</div>
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-6">
                   <a class="item wow inShow" data-wow-delay="0.7s" :href="userInfo.website" target="_blank">
                     <h4>Website</h4>
                     <div class="info">{{userInfo.website}}</div>
-                  </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                  <a class="item wow inShow" data-wow-delay="0.75s" :href="userInfo.github" target="_blank">
-                    <h4>Github</h4>
-                    <div class="info">{{userInfo.github}}</div>
                   </a>
                 </div>
               </div>
